@@ -140,12 +140,12 @@ void draw()
 {
     gotoxy(0,0);
     gotoxy(49 , 33);
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);    //Blue color
     cout << "SCORE : " << score;
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),12);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),12);    //Red color for fruit
     gotoxy(fruitX,fruitY);
     cout << char(162);
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),10);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),10);    //Green color for snake
     gotoxy(headX,headY);
     cout << char(233);
     gotoxy(tailX[0],tailY[0]);  //Previous head is now part of tail so change character at that position
@@ -282,7 +282,7 @@ void moveSnake()
 main()
 {
     system("cls");
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);    //Blue color text
     instructions();
     
     system("cls");
@@ -295,7 +295,7 @@ main()
         moveSnake();
     }
 
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),11);    //Blue color
     gotoxy(40,20);
     for (int i=1 ; i<=11 ; i++)
         cout << char(177);
